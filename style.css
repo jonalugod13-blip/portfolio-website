@@ -1,31 +1,104 @@
-html 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-    font-family: Arial;
-    background-color: rgb(197, 238, 238) ;
-    
+  background-color: #f4f6f8;
+  color: #333;
 }
 
-#title {
-    color: rgb(1, 5, 5)
+/* Header */
+.header {
+  background: #4f46e5;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
-#juna {
-    color: rgb(1, 5, 5);
 
+.header h1 {
+  font-size: 2.5rem;
 }
-#Picture {
-    max-width: 10%;
-    border-radius:  80px;
+
+.header .name {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
-hr {
-    margin-right: 250px;
-    margin-left: 250px;
-    
+
+.header .course {
+  font-size: 1rem;
+  opacity: 0.9;
 }
-h2 {
-    margin-right: 500px;
-    margin-left:  500px;
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
-li {
-    margin-right: 300px;
-    margin-left: 300px;
+
+/* Profile */
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #4f46e5;
+}
+
+/* Sections */
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  color: #4f46e5;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+/* Footer */
+.footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
