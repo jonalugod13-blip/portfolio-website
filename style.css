@@ -1,0 +1,31 @@
+html 
+body {
+    font-family: Arial;
+    background-color: rgb(197, 238, 238) ;
+    
+}
+
+#title {
+    color: rgb(1, 5, 5)
+}
+#juna {
+    color: rgb(1, 5, 5);
+
+}
+#Picture {
+    max-width: 10%;
+    border-radius:  80px;
+}
+hr {
+    margin-right: 250px;
+    margin-left: 250px;
+    
+}
+h2 {
+    margin-right: 500px;
+    margin-left:  500px;
+}
+li {
+    margin-right: 300px;
+    margin-left: 300px;
+}
