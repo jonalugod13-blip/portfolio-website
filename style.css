@@ -14,6 +14,8 @@ html{
 }
 
 body{
+    width: 100%;
+    height: 100vh;
     min-height: 100vh;
     background: #121212;
     color: #f1f1f1;
@@ -22,25 +24,28 @@ body{
 
 /* ========== HEADER ========== */
 header{
+    margin-top: 20px;
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    padding: 1.2rem;
+    padding: 1rem 8% ;
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 80;
+    z-index: 90;
 }
 
 .logo{
-    font-size: 2.6rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 600;
     color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s ease;
 }
 
 /* ========== NAVIGATION ========== */
@@ -67,17 +72,55 @@ nav a::after{
     background: #ffffff;
     transition: 0.3s ease;
 }
-
+.logo{
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight:500;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo.hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color:#ffffff;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;        
+}
 nav a:hover::after,
 nav a.active::after{
+    color: #ffffff;
     width: 100%;
+    border-bottom: 3px solid #ffffff;
 }
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        top:100%;
+        right:0;
+        width: 40%;
+        border-left: 3px solid #ffffff;
+        border-bottom: 3px solid #fff ;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color:#161616;
+        border-top: 0.1rem solid #161616;
+    }
+}
+nav.active{
+    display: block;
 
+}
 /* ========== SECTIONS ========== */
 section{
     min-height: 100vh;
     padding: 8rem 8%;
 }
+
+
 
 /* ========== HOME ========== */
 .home{
@@ -91,6 +134,9 @@ section{
 .home-content h1{
     font-size: 5.5rem;
     font-weight: 700;
+}
+span{
+    color:#ffffff;
 }
 
 .home-content h3{
@@ -184,6 +230,30 @@ span{
     border-left:3px solid;
     right: -8;
     animation: cursor 0.6s infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 3px solid #ffffff;
+    }
+}
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer" ;
+    }
+    21%, 40%{
+        content: "Script Writer";
+    }
+    41%, 60%{
+        content:"Web Designer";
+    }
+    61%, 80%{
+        content: "Singer";
+    }
+    81%, 100%{
+        content: "Dancer";
+    }
+
+
 
 }
 /* ========== SKILLS SECTION ========== */
@@ -201,6 +271,7 @@ hero-section {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
+
 }
 
 .hero-section .section-content p {
@@ -225,7 +296,7 @@ hero-section {
 }
 
 .skills-icons i:hover {
-    color: #ff00a8; /* Highlight color on hover */
+    color: #0b0b0b; /* Highlight color on hover */
     transform: scale(1.2);
 }
 
@@ -243,10 +314,28 @@ hero-section {
         font-size: 2.5rem;
     }
 }
+@media (max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home.home-content h3{
+        font: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+
+}
 
 @media screen and (max-width: 480px) {
     .hero-section .section-content h2 {
         font-size: 1.8rem;
+        font-style: italic;
     }
 
     .skills-icons i {
@@ -300,7 +389,7 @@ hero-section {
     color: #ffffff;
 }
 
-/* Portfolio cards (if you have) - example style */
+
 .portfolio-card{
     background: #1e1e1e;
     border-radius: 2rem;
@@ -310,17 +399,222 @@ hero-section {
     transition: 0.3s ease, border 0.3s ease;
 }
 
-.portfolio-card:hover{
-    transform: translateY(-10px);
+
+.section-content{
+    font-style: italic;
+    font-size: x-large;
+    margin-top: 4rem;
+    padding: 4rem;
+    background: #1e1e1e; /* dark background to match overall theme */
+    color: #f1f1f1;
+    border-radius: 2rem;
+    border: 2px solid rgba(255,255,255,0.1); /* subtle border */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transition: 0.3s ease, border 0.3s ease;
+
+}
+.skills {
+  min-height: 100vh;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.skills-box {
+  font-style: italic;
+  font-size: x-large;
+  margin-top: 4rem;
+  padding: 4rem;
+  background: #1e1e1e; /* dark background to match overall theme */
+  color: #f1f1f1;
+  border-radius: 2rem;
+  border: 2px solid rgba(255,255,255,0.1); /* subtle border */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: 0.3s ease, border 0.3s ease;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.skills-box:hover {
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-5px);
+}
+
+.skills-box h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.skills-box p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.skills.hover{
+    transform: translateY(-8px);
     border-color: #ffffff;
 }
+.skills {
+    font-size: 2.5rem;
+    font-style: oblique;
+}
+.create{
+    font-style: italic;
+    font-size: x-large;
+    margin-top: 4rem;
+    padding: 4rem;
+    background: #1e1e1e; /* dark background to match overall theme */
+    color: #f1f1f1;
+    border-radius: 2rem;
+    border: 2px solid rgba(255,255,255,0.1); /* subtle border */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transition: 0.3s ease, border 0.3s ease;
 
-/* General button / element borders consistency */
-.btn{
-    border: 2px solid #ffffff; /* make it consistent with cards */
+}
+.project {
+  min-height: 100vh;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-.btn:hover{
-    background: transparent;
-    color: #ffffff;
+.project-box {
+  font-style: italic;
+  font-size: x-large;
+  margin-top: 4rem;
+  padding: 4rem;
+  background: #1e1e1e; /* dark background to match overall theme */
+  color: #f1f1f1;
+  border-radius: 2rem;
+  border: 2px solid rgba(255,255,255,0.1); /* subtle border */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: 0.3s ease, border 0.3s ease;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.project-box:hover {
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-5px);
+}
+
+.project-box h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.project-box p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* 6. CONTACT SECTION */
+.container{
+    font-style: italic;
+    font-size: x-large;
+    margin-top: 4rem;
+    padding: 4rem;
+    background: #1e1e1e; /* dark background to match overall theme */
+    color: #f1f1f1;
+    border-radius: 2rem;
+    border: 2px solid rgba(255,255,255,0.1); /* subtle border */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transition: 0.3s ease, border 0.3s ease;
+}
+.contact {
+  min-height: 100vh;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-box {
+  font-style: italic;
+  font-size: x-large;
+  padding: 4rem;
+  background: #1e1e1e;
+  color: #f1f1f1;
+  border-radius: 2rem;
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: 0.3s ease, border 0.3s ease;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-box:hover {
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-5px);
+}
+
+.contact-box h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-box p {
+  margin-bottom: 2.5rem;
+  color: #ccc;
+  font-size: large;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(57, 56, 56, 0.4);
+  border: 1px solid #333;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #777;
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #333, #555);
+  color: #fff;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #555, #777);
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 3rem;
+    font-size: large;
+  }
 }
