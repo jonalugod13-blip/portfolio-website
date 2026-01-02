@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -20,6 +19,8 @@ body{
     color: #f1f1f1;
     overflow-x: hidden;
 }
+
+/* ========== HEADER ========== */
 header{
     position: fixed;
     top: 20px;
@@ -41,6 +42,8 @@ header{
     font-weight: 700;
     color: #ffffff;
 }
+
+/* ========== NAVIGATION ========== */
 nav a{
     font-size: 1.6rem;
     color: #dcdcdc;
@@ -69,10 +72,14 @@ nav a:hover::after,
 nav a.active::after{
     width: 100%;
 }
+
+/* ========== SECTIONS ========== */
 section{
     min-height: 100vh;
     padding: 8rem 8%;
 }
+
+/* ========== HOME ========== */
 .home{
     display: flex;
     align-items: center;
@@ -105,12 +112,16 @@ section{
 span{
     color: #ffffff;
 }
+
+/* ========== PROFILE IMAGE ========== */
 .home-img img{
     width: 260px;
     border-radius: 50%;
     border: 4px solid rgba(255,255,255,0.2);
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
+
+/* ========== SOCIAL ICONS ========== */
 .social-icons{
     margin-top: 3rem;
 }
@@ -134,6 +145,8 @@ span{
     color: #121212;
     transform: translateY(-5px);
 }
+
+/* ========== BUTTON ========== */
 .btn{
     display: inline-block;
     margin-top: 3rem;
@@ -258,4 +271,3 @@ span{
     background: transparent;
     color: #ffffff;
 }
-
